@@ -1,18 +1,19 @@
 {
   "name": "agenciaviajesnode",
   "version": "1.0.0",
-  "description": "",
+  "description": "Primer proyecto de Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "AgenciaViajesNode"
-  },
+  "type": "module",
   "author": "Diego Ruiz",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
