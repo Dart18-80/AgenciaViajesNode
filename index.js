@@ -11,6 +11,10 @@ const app = express();
 //Habilitar PUG
 app.set('view engine', 'pug');
 
+//Conectar a la base de datos
+db.authenticate()
+    .then( () => console.log('Base de datos conectada'))
+    .catch(error => console.log(error));
 
 
 //Obtener el año actual
@@ -34,7 +38,7 @@ app.use('/', router);
 
 //Puerto y host para la app
 const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.listen(port, host, () =>{
     console.log('El servidor esta funcionando');
 });
